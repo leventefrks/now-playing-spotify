@@ -20,7 +20,7 @@ yarn dev
 - TailwindCSS
 - Spotify API
 
-## Live Version
+## Live version
 
 [Live](https://now-playing-spotify-gold.vercel.app/)
 
