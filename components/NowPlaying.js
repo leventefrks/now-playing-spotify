@@ -37,7 +37,7 @@ const NowPlaying = () => {
           alt={title}
         />
         <div className="mt-4 flex flex-col items-center">
-          <span className="text-3xl font-bold">{title}</span>
+          <span className="text-center text-3xl font-bold">{title}</span>
           <span className="text-md ">{artist}</span>
         </div>
       </Link>
