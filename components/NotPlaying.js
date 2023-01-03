@@ -7,7 +7,7 @@ const NotPlaying = () => {
       <span className="font-light text-gray-50">
         I&apos;m probably out there{' '}
         <strong className="text-3xl">running</strong> in the woods or{' '}
-        <strong className="text-3xl">sleeping.</strong>😴
+        <strong className="text-3xl">sleeping</strong>😴
       </span>
     </h1>
   );
