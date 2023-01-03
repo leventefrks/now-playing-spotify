@@ -1,6 +1,6 @@
 # Now Playing
 
-You can see what i'm currently listening on Spotify
+You can see what i'm currently listening to on Spotify
 
 ## Getting Started
 
