@@ -20,6 +20,12 @@ yarn dev
 - TailwindCSS
 - Spotify API
 
+## Environment variables
+
+NEXT_SPOTIFY_CLIENT_ID: The Client ID you got from Spotify Developer Dashboard
+NEXT_SPOTIFY_CLIENT_SECRET: The Client Secret you got from Spotify Developer Dashboard
+NEXT_SPOTIFY_REFRESH_TOKEN: The Refresh Token you got from Spotify API
+
 ## Live version
 
 [Live](https://now-playing-spotify-gold.vercel.app/)
