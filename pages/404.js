@@ -1,6 +1,6 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { Inter } from '@next/font/google';
-import NowPlaying from '../components/NowPlaying';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,8 +13,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-full min-h-screen flex items-center justify-center bg-gray-800 text-gray-100 px-5 md:px-0">
-        <NowPlaying />
+      <main className="flex min-h-screen w-full flex-col items-center justify-center gap-2 bg-gray-800 px-5 text-3xl font-light text-gray-100 md:px-0">
+        <span>
+          Oops, something went <strong>wrong</strong>.
+        </span>
+        <Link href="/" className="text-sm font-bold">
+          Go back!
+        </Link>
       </main>
     </>
   );
