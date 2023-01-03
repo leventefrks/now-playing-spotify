@@ -24,7 +24,9 @@ const NowPlaying = () => {
       >
         <BsSpotify className="h-10 w-10 text-green-400" />
         <div className="flex">
-          <h1 className="text-md font-light">Currently listening to</h1>
+          <h1 className="text-md font-light">
+            I&apos;m currently listening to
+          </h1>
           <Animation />
         </div>
         <Image
