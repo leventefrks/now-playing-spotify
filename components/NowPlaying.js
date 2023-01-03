@@ -19,6 +19,7 @@ const NowPlaying = () => {
     <div className="flex flex-col items-center">
       <Link
         href={songUrl}
+        target="_blank"
         className="flex flex-col items-center gap-4 px-4 py-2"
       >
         <BsSpotify className="h-10 w-10 text-green-400" />
@@ -31,7 +32,6 @@ const NowPlaying = () => {
           width={96}
           height={96}
           blur="true"
-          target="_blank"
           rel="noopener noreferrer"
           className="h-full w-full"
           alt={title}
