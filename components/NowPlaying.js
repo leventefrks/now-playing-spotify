@@ -35,7 +35,7 @@ const NowPlaying = () => {
           height={96}
           blur="true"
           rel="noopener noreferrer"
-          className="h-full w-full"
+          className="h-[300px] w-[300px] object-cover"
           alt={title}
         />
         <div className="mt-4 flex flex-col items-center">
