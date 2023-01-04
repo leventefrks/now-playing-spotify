@@ -1,10 +1,13 @@
 import useSWR from 'swr';
+import { useState } from 'react';
 import { fetcher } from '../lib/fetcher';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const TopTracks = () => {
   const { data, error, isLoading } = useSWR('/api/tracks', fetcher);
+
+  const [isTopTracksVisible, setTopTracksVisible] = useState(false);
 
   if (error)
     return (
@@ -35,8 +38,18 @@ const TopTracks = () => {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <h3 className="mb-3 font-bold text-green-400">My top tracks</h3>
-      <ul className="flex items-center gap-4">{trackList}</ul>
+      <button
+        onClick={() => setTopTracksVisible(!isTopTracksVisible)}
+        className="mb-3 font-light text-green-400"
+      >
+        Are you curious about my top tracks?
+      </button>
+
+      {isTopTracksVisible && (
+        <ul className="flex flex-col items-center gap-4 md:flex-row">
+          {trackList}
+        </ul>
+      )}
     </div>
   );
 };
