@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Now playing Spotify</title>
+        <title>Now playing Spotify - Page not found</title>
         <meta name="description" content="What Am I Listening on Spotify?" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -17,7 +17,7 @@ export default function Home() {
         <span>
           Oops, something went <strong>wrong</strong>.
         </span>
-        <Link href="/" className="text-sm font-bold">
+        <Link href="/" className="text-sm font-bold text-green-400">
           Go back!
         </Link>
       </main>

@@ -15,7 +15,8 @@ const TopTracks = () => {
         Failed to load favorite tracks...
       </div>
     );
-  if (isLoading) return <div className="text-xs">Loading...</div>;
+
+  if (!data) return;
 
   const trackList = data.map(({ url, title, artist, coverImage }) => (
     <Link
