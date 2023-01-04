@@ -10,15 +10,14 @@ const NowPlaying = () => {
   const { data, error, isLoading } = useSWR('/api/now-playing', fetcher);
 
   if (error) return <div className="text-xl">Failed to load</div>;
-
   if (isLoading) return <div className="text-xl">Loading...</div>;
 
-  const { songUrl, artist, title, isPlaying, albumImageUrl } = data;
+  const { url, artist, title, isPlaying, albumImageUrl } = data;
 
-  return data.isPlaying ? (
+  return isPlaying ? (
     <div className="flex flex-col items-center">
       <Link
-        href={songUrl}
+        href={url}
         target="_blank"
         className="flex flex-col items-center gap-4 px-4 py-2"
       >
