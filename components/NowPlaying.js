@@ -9,7 +9,7 @@ import Animation from './Animation';
 const NowPlaying = () => {
   const { data, error, isLoading } = useSWR('/api/now-playing', fetcher);
 
-  if (error) return <div className="text-xl">Failed to load</div>;
+  if (error) return <div className="text-xs text-red-300">Failed to load</div>;
   if (isLoading) return <div className="text-xl">Loading...</div>;
 
   const { url, artist, title, isPlaying, albumImageUrl } = data;
@@ -19,9 +19,10 @@ const NowPlaying = () => {
       <Link
         href={url}
         target="_blank"
-        className="flex flex-col items-center gap-4 px-4 py-2"
+        rel="noopener noreferrer"
+        className="mb-4 flex flex-col items-center px-4 py-2"
       >
-        <BsSpotify className="h-10 w-10 text-green-400" />
+        <BsSpotify className="mb-4 h-10 w-10 text-green-400" />
         <div className="flex">
           <h1 className="text-md font-light">
             I&apos;m currently listening to
@@ -33,13 +34,14 @@ const NowPlaying = () => {
           width={96}
           height={96}
           blur="true"
-          rel="noopener noreferrer"
-          className="h-[300px] w-[300px] object-cover"
+          className="mb-3 h-[250px] w-[250px]"
           alt={title}
         />
-        <div className="mt-4 flex flex-col items-center">
-          <h2 className="text-center text-3xl font-bold">{title}</h2>
-          <h3 className="text-md ">{artist}</h3>
+        <div className="flex flex-col items-center">
+          <h2 className="text-center text-3xl font-bold text-gray-200">
+            {title}
+          </h2>
+          <h3 className="text-md text-gray-400">{artist}</h3>
         </div>
       </Link>
     </div>
