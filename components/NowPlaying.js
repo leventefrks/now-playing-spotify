@@ -12,7 +12,7 @@ const NowPlaying = () => {
   if (error) return <div className="text-xs text-red-300">Failed to load</div>;
   if (isLoading) return <div className="text-xl">Loading...</div>;
 
-  const { url, artist, title, isPlaying, albumImageUrl } = data;
+  const { isPlaying, url, artist, title, albumImageUrl } = data;
 
   return isPlaying ? (
     <div className="flex flex-col items-center">
