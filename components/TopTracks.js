@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const TopTracks = () => {
-  const { data, error, isLoading } = useSWR('/api/tracks', fetcher);
+  const { data: tracks, error, isLoading } = useSWR('/api/tracks', fetcher);
 
   const [isTopTracksVisible, setTopTracksVisible] = useState(false);
 
@@ -16,9 +16,9 @@ const TopTracks = () => {
       </div>
     );
 
-  if (!data) return;
+  if (!tracks) return;
 
-  const trackList = data.map(({ url, title, artist, coverImage }) => (
+  const trackList = tracks.map(({ url, title, artist, coverImage }) => (
     <Link
       key={url}
       href={url}

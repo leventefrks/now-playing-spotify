@@ -7,12 +7,12 @@ import NotPlaying from './NotPlaying';
 import Animation from './Animation';
 
 const NowPlaying = () => {
-  const { data, error, isLoading } = useSWR('/api/now-playing', fetcher);
+  const { data: track, error, isLoading } = useSWR('/api/now-playing', fetcher);
 
   if (error) return <div className="text-xs text-red-300">Failed to load</div>;
   if (isLoading) return <div className="text-xl">Loading...</div>;
 
-  const { isPlaying, url, artist, title, albumImageUrl } = data;
+  const { isPlaying, url, artist, title, albumImageUrl } = track;
 
   return isPlaying ? (
     <div className="flex flex-col items-center">
