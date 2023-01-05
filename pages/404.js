@@ -17,7 +17,7 @@ export default function Home() {
         <span>
           Oops, something went <strong>wrong</strong>.
         </span>
-        <Link href="/" className="text-sm font-bold text-green-400">
+        <Link href="/" className="text-sm font-bold text-green-500">
           Go back!
         </Link>
       </main>

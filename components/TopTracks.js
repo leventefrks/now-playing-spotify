@@ -43,7 +43,7 @@ const TopTracks = () => {
         onClick={() => setTopTracksVisible(!isTopTracksVisible)}
         className="mb-3 font-light text-green-400"
       >
-        Are you curious about my top tracks?
+        You want to know what my top tracks are?
       </button>
 
       {isTopTracksVisible && (

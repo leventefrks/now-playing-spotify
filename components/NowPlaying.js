@@ -22,13 +22,15 @@ const NowPlaying = () => {
         rel="noopener noreferrer"
         className="mb-4 flex flex-col items-center px-4 py-2"
       >
-        <BsSpotify className="mb-4 h-10 w-10 text-green-400" />
-        <div className="flex">
+        <BsSpotify className="mb-4 h-10 w-10 text-green-500" />
+
+        <div className="flex items-center leading-relaxed">
           <h1 className="text-md font-light">
             I&apos;m currently listening to
           </h1>
           <Animation />
         </div>
+
         <Image
           src={albumImageUrl}
           width={96}
