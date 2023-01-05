@@ -41,7 +41,7 @@ const TopTracks = () => {
     <div className="flex flex-col items-center gap-2">
       <button
         onClick={() => setTopTracksVisible(!isTopTracksVisible)}
-        className="mb-3 font-light text-green-400"
+        className="mb-3 font-light text-green-500"
       >
         You want to know what my top tracks are?
       </button>
