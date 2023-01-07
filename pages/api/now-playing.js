@@ -1,6 +1,6 @@
 import { getNowPlaying } from '../../lib/spotify.js';
 
-export default async function handler(req, res) {
+const handler = async (req, res) => {
   const response = await getNowPlaying();
   const { status } = response;
 
@@ -31,4 +31,6 @@ export default async function handler(req, res) {
     url,
     title,
   });
-}
+};
+
+export default handler;

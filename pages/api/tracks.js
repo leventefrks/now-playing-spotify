@@ -1,14 +1,14 @@
 import { getTopTracks } from '../../lib/spotify';
 
-export default async function handler(req, res) {
+const handler = async (req, res) => {
   const response = await getTopTracks();
   const { items } = await response.json();
 
-  const tracks = items.map(track => ({
-    title: track.name,
-    artist: track.artists.map(_artist => _artist.name).join(', '),
-    url: track.external_urls.spotify,
-    coverImage: track.album.images[1],
+  const tracks = items.map(({ name, artists, external_urls, album }) => ({
+    title: name,
+    artist: artists.map(_artist => _artist.name).join(', '),
+    url: external_urls.spotify,
+    coverImage: album.images[1],
   }));
 
   res.setHeader(
@@ -17,4 +17,6 @@ export default async function handler(req, res) {
   );
 
   return res.status(200).json(tracks);
-}
+};
+
+export default handler;
