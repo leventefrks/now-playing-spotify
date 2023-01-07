@@ -11,7 +11,7 @@ const TopTracks = () => {
 
   if (error)
     return (
-      <div className="text-xs text-red-300">
+      <div className="mb-4 text-xs text-red-300">
         Failed to load favorite tracks...
       </div>
     );
