@@ -4,13 +4,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BsSpotify } from 'react-icons/bs';
 import NotPlaying from './NotPlaying';
+import Loader from './Loader';
 import Animation from './Animation';
 
 const NowPlaying = () => {
   const { data: track, error, isLoading } = useSWR('/api/now-playing', fetcher);
 
   if (error) return <div className="text-xs text-red-300">Failed to load</div>;
-  if (isLoading) return <div className="text-xl">Loading...</div>;
+  if (isLoading) return <Loader />;
 
   const { isPlaying, url, artist, title, albumImageUrl } = track;
 
