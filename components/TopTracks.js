@@ -22,7 +22,7 @@ const TopTracks = () => {
     <Link
       key={url}
       href={url}
-      className="mb-2 flex flex-col items-center justify-center text-center"
+      className="duration-250 mb-2 flex flex-col items-center justify-center text-center transition hover:scale-110"
     >
       <Image
         width={32}
@@ -38,7 +38,7 @@ const TopTracks = () => {
   ));
 
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-4">
       <button
         onClick={() => setTopTracksVisible(!isTopTracksVisible)}
         className="mb-3 font-light text-green-500"
@@ -47,7 +47,7 @@ const TopTracks = () => {
       </button>
 
       {isTopTracksVisible && (
-        <ul className="flex flex-col items-center gap-4 md:flex-row">
+        <ul className="flex flex-col items-center gap-12 md:flex-row">
           {trackList}
         </ul>
       )}
