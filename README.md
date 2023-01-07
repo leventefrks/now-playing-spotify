@@ -1,6 +1,7 @@
 # Now Playing on Spotify
 
-You can see what i'm currently listening to on Spotify & my top tracks
+You can see what i'm currently listening to on Spotify.
+So this feature on a couple of portfolio sites and I also wanted to recreate it.
 
 ## Getting Started
 
