@@ -6,11 +6,12 @@ import { BsSpotify } from 'react-icons/bs';
 import NotPlaying from './NotPlaying';
 import Loader from './Loader';
 import Animation from './Animation';
+import Error from './Error';
 
 const NowPlaying = () => {
   const { data: track, error, isLoading } = useSWR('/api/now-playing', fetcher);
 
-  if (error) return <div className="text-xs text-red-300">Failed to load</div>;
+  if (error) return <Error text="currently playing track" />;
   if (isLoading) return <Loader />;
 
   const { isPlaying, url, artist, title, albumImageUrl } = track;

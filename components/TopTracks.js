@@ -3,19 +3,14 @@ import { useState } from 'react';
 import { fetcher } from '../lib/fetcher';
 import Image from 'next/image';
 import Link from 'next/link';
+import Error from './Error';
 
 const TopTracks = () => {
   const { data: tracks, error, isLoading } = useSWR('/api/tracks', fetcher);
 
   const [isTopTracksVisible, setTopTracksVisible] = useState(false);
 
-  if (error)
-    return (
-      <div className="mb-4 text-xs text-red-300">
-        Failed to load favorite tracks...
-      </div>
-    );
-
+  if (error) return <Error text="favorite tracks" />;
   if (!tracks) return;
 
   const trackList = tracks.map(({ url, title, artist, coverImage }) => (
