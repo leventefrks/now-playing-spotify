@@ -17,6 +17,7 @@ yarn dev
 
 - Next.js
 - React icons
+- Next font
 - useSWR
 - TailwindCSS
 - Spotify API
