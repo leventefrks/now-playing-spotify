@@ -17,12 +17,12 @@ const NowPlaying = () => {
   const { isPlaying, url, artist, title, albumImageUrl } = track;
 
   return isPlaying ? (
-    <div className="flex flex-col items-center">
+    <div className="mt-4 flex flex-col items-center">
       <Link
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="mb-4 flex flex-col items-center px-4 py-2"
+        className="mb-4 flex flex-col items-center"
       >
         <BsSpotify className="mb-4 h-10 w-10 text-green-500" />
 
