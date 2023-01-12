@@ -37,11 +37,12 @@ const NowPlaying = () => {
           src={albumImageUrl}
           width={96}
           height={96}
-          blur="true"
-          className="mb-3 h-[250px] w-[250px]"
+          placeholder="blur"
+          className="h-[250px] w-[250px]"
           alt={title}
+          blurDataURL={albumImageUrl}
         />
-        <div className="flex flex-col items-center">
+        <div className="mt-3 flex flex-col items-center">
           <h2 className="text-center text-3xl font-bold text-gray-200">
             {title}
           </h2>
