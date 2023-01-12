@@ -20,7 +20,7 @@ yarn dev
 - Next font
 - useSWR
 - TailwindCSS
-- Tailwind Animation plugin
+- Tailwind Animation delay plugin
 - Spotify API
 
 ## Environment variables
