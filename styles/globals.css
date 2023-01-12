@@ -9,55 +9,6 @@ body {
   overscroll-behavior: none;
 }
 
-.loader-dots div {
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-
-.loader-dots div:nth-child(1) {
-  left: 8px;
-  animation: loader-dots1 1s infinite;
-}
-
-.loader-dots div:nth-child(2) {
-  left: 8px;
-  animation: loader-dots2 1s infinite;
-}
-
-.loader-dots div:nth-child(3) {
-  left: 32px;
-  animation: loader-dots2 1s infinite;
-}
-
-.loader-dots div:nth-child(4) {
-  left: 56px;
-  animation: loader-dots3 1s infinite;
-}
-
-@keyframes loader-dots1 {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes loader-dots3 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes loader-dots2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(24px, 0);
-  }
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

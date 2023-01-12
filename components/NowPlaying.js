@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { BsSpotify } from 'react-icons/bs';
 import NotPlaying from './NotPlaying';
 import Loader from './Loader';
-import Animation from './Animation';
+import Visualizer from './Visualizer';
 import Error from './Error';
 
 const NowPlaying = () => {
@@ -26,11 +26,11 @@ const NowPlaying = () => {
       >
         <BsSpotify className="mb-4 h-10 w-10 text-green-500" />
 
-        <div className="flex items-center leading-relaxed">
+        <div className="mb-3 flex items-center gap-4 leading-relaxed">
           <h1 className="text-md font-light">
             I&apos;m currently listening to
           </h1>
-          <Animation />
+          <Visualizer />
         </div>
 
         <Image
