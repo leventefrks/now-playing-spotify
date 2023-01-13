@@ -1,4 +1,4 @@
-# Now Playing on Spotify
+# Now Playing on Spotify🎶
 
 What am I currently listening to? Come and check it out!
 I saw this feature on a couple of portfolio sites and I also wanted to recreate it.
