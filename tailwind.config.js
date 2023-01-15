@@ -8,6 +8,7 @@ module.exports = {
     animationDelay: {
       22: '-2.2s;',
       37: '-3.7s',
+      17: '-1.7s',
     },
     extend: {
       animation: {
