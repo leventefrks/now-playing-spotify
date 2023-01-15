@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`${roboto.className}  flex min-h-screen w-full flex-col items-center justify-center bg-gray-800 px-3 text-gray-100 md:px-0`}
+        className={`${roboto.className} flex min-h-screen w-full flex-col items-center justify-center bg-gray-800 px-3 text-gray-100 md:px-0`}
       >
         <NowPlaying />
         <TopTracks />
