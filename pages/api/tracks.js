@@ -4,7 +4,7 @@ const handler = async (req, res) => {
   const response = await getTopTracks();
   const { items } = await response.json();
 
-  const tracks = items.map(({ name, artists, external_urls, album }) => ({
+  const tracks = items?.map(({ name, artists, external_urls, album }) => ({
     title: name,
     artist: artists.map(_artist => _artist.name).join(', '),
     url: external_urls.spotify,
